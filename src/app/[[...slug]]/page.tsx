@@ -7,7 +7,7 @@ interface MyPageProps {
   searchParams: Record<string, string>;
 }
 
-const apiKey = "f1a790f8c3204b3b8c5c1795aeac4660";
+const apiKey = "ad30f9a246614faaa6a03374f83554c9";
 
 export default async function Page(props: MyPageProps) {
   // NOTE: the import must be inside the Page component itself.
@@ -15,7 +15,7 @@ export default async function Page(props: MyPageProps) {
   const { initializeNodeRuntime } = await import("@builder.io/sdk-react-nextjs/node/init");
   initializeNodeRuntime();
 
-  const urlPath = "/" + (props.params?.slug?.join("/") || "");
+  const urlPath = "/data-symbols";
 
   const content = await fetchOneEntry({
     model: "page",
